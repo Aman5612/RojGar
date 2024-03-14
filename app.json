@@ -22,7 +22,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.virtualguy.rojgar"
     },
     "web": {
       "bundler": "metro",
@@ -34,6 +35,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d924ede6-bd33-46ef-9145-8cfc27e81f3d"
+      }
+    },
+    "owner": "virtualguy"
   }
 }
