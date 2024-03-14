@@ -8,10 +8,9 @@ import {
 
 import { useRouter } from "expo-router";
 import { COLORS, SIZES } from "../../../constants";
-import PopularJobCard from "@/components/common/cards/nearby/NearbyJobCard";
+import NearbyJobCard from "@/components/common/cards/nearby/NearbyJobCard";
 import styles from "./nearbyjobs.style";
 import { useFetch } from "@/hook/useFetch";
-import { NearbyJobCard } from "@/components";
 
 const Nearbyjobs = () => {
   const router = useRouter();
@@ -45,7 +44,9 @@ const Nearbyjobs = () => {
             <NearbyJobCard
               key={`nearby-job-${job?.job_id}`}
               job={job}
-              onPress={() => router.push(`JobDetail/${job.job_id}`)}
+              handleNavigate={() => {
+                router.push(`JobDetails/${job.job_id}`);
+              }}
             />
           ))
         )}
